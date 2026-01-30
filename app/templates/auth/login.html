@@ -1,0 +1,31 @@
+{% extends "/auth/layout.html" %}
+
+{% macro render_field(field) %}
+  <div style="display: flex; align-items: center; margin-bottom: 1em;">
+    <div>
+      {{ field.label }} {{ field(class_='error-message' if field.errors else '') }}
+    </div>
+    {% if field.errors %}
+      <span style="color: red; margin-left: 10px;">
+        {{ field.errors[0] }}
+      </span>
+    {% endif %}
+  </div>
+{% endmacro %}
+
+
+{% block body %}
+<div class="section">
+    <fieldset>
+      <legend>Log In</legend>
+        <form action="{{ url_for('auth.login') }}" method="post">
+        {{ form.csrf_token }}<br>
+        {{ render_field(form.username) }}<br>
+        {{ render_field(form.password) }}
+        {{ form.submit }}
+        Not Registered? <a href="{{ url_for('auth.register') }}">Register</a>
+        </form>
+    </fieldset>
+</div>
+
+{% endblock %}

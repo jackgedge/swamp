@@ -1,0 +1,11 @@
+{% extends "/auth/layout.html" %}
+
+{% block body %}
+    
+Registration Confirmed <br>
+
+Username: {{ username }}
+
+<a href="{{ url_for('auth.login') }}" id="login">Login</a>
+
+{% endblock %}

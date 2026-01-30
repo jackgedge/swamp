@@ -1,0 +1,78 @@
+* {
+  font-family: Monaco, monospace !important;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+}
+
+nav ul li a:hover {
+  background-color: #111;
+  border-radius: 4px;
+}
+
+.error-message {
+  font-family: Monaco, monospace;
+  color: red;
+  font-weight: bold;
+}
+
+.centre-content {
+  height: 100%;
+  margin: 0;
+  font-family: Monaco, monospace !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: center;
+}
+
+.section .filter form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;   /* optional: limit width so it doesn't look stretched */
+    margin: 0 auto;     /* this centers the form horizontally */
+}
+
+/* Table styling */
+table {
+  border-collapse: collapse;       /* Makes borders single instead of double */
+  width: 100%;                      /* Optional: makes the table full width */
+}
+
+th, td {
+  border: 1px solid black;          /* Solid black border for all cells */
+  padding: 8px;                     /* Space around text inside cells */
+  text-align: left;                 /* Adjust alignment if you want center, right, etc. */
+}
+
+/* Optional: zebra stripes for readability */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Optional: header styling */
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}

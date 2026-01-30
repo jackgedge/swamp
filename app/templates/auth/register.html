@@ -1,0 +1,29 @@
+{% extends "/auth/layout.html" %}
+
+{% block body %}
+
+{% import 'macros/forms.html' as forms %}
+
+<div class="section">
+  <fieldset>
+    <legend>Registration Details</legend>
+    <form action="{{ url_for('auth.register') }}" method="post">
+      {{ form.csrf_token }}
+      <table>
+        {{ forms.render_field(form.first_name) }}
+        {{ forms.render_field(form.last_name) }}
+	{{ forms.render_field(form.esr_number) }}
+	{{ forms.render_field(form.email) }}
+        {{ forms.render_field(form.password) }}
+        {{ forms.render_field(form.confirm_password) }}
+        <tr>
+          <td colspan="2" style="text-align: center;">
+            {{ form.submit }}
+          </td>
+        </tr>
+      </table>
+    </form>
+  </fieldset>
+</div>
+
+{% endblock %}
