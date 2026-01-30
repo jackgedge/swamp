@@ -2,8 +2,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, SubmitField, TextAreaField, IntegerField, DecimalField
 from wtforms.fields import DateField
 from wtforms.validators import InputRequired, Length, EqualTo, NumberRange, ValidationError
-from sqlalchemy.orm import Session
-from app.extensions import engine
+from app.extensions import db
 
 class UserRegistrationForm(FlaskForm):
     first_name = StringField('First Name', validators=[InputRequired()])
